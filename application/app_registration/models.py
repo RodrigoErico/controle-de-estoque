@@ -5,3 +5,8 @@ class Product(models.Model):
     item = models.CharField(max_length=50)
     stock = models.PositiveSmallIntegerField()
     
+    def __str__(self):
+        text = "{0} ({1})"
+        return text.format(self.item, self.stock)
+    
+    
